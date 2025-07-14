@@ -20,11 +20,11 @@ try:
     response = requests.get(f"{api_url}/")
     health = response.json()
     if health["status"] == "healthy":
-        st.sidebar.success("✅ API Connected")
+        st.sidebar.success("API Connected")
     else:
-        st.sidebar.error("❌ API Error")
+        st.sidebar.error("API Error")
 except Exception as e:
-    st.sidebar.error(f"❌ Connection Error: {str(e)}")
+    st.sidebar.error(f"Connection Error: {str(e)}")
 
 # Main content
 tab1, tab2, tab3 = st.tabs(["Get Recommendations", "Model Info", "Test"])
