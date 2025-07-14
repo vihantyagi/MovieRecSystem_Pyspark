@@ -1,0 +1,62 @@
+# docker-compose.yml
+services:
+  spark:
+    build:
+      context: .
+      dockerfile: docker/spark/Dockerfile
+    container_name: pyspark-movie-rec
+    volumes:
+      - ./src:/app/src
+      - ./data:/app/data
+      - ./models:/app/models     
+      - ./notebooks:/app/notebooks
+    ports:
+      - "4040:4040"  # Spark UI
+      - "8888:8888"  # Jupyter (optional)
+    environment:
+      - SPARK_MODE=standalone
+      - SPARK_MASTER_HOST=spark
+      - PYTHONPATH=/app           
+    networks:                      
+      - movie-rec-network
+    command: tail -f /dev/null
+
+  api:                             
+    build:
+      context: .
+      dockerfile: docker/api/Dockerfile
+    container_name: movie-rec-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/app/src
+      - ./models:/app/models
+      - ./data:/app/data
+    environment:
+      - MODEL_PATH=/app/models/als_model
+      - PYTHONPATH=/app
+    depends_on:
+      - spark
+    networks:
+      - movie-rec-network
+  
+  dashboard:
+    build:
+      context: .
+      dockerfile: docker/dashboard/Dockerfile
+    container_name: movie-rec-dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./src:/app/src
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=true
+      - STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
+    depends_on:
+      - api
+    networks:
+      - movie-rec-network
+    command: streamlit run src/dashboard/app.py --server.address=0.0.0.0 --server.headless=true --browser.serverAddress=localhost --server.port=8501
+networks:                          
+  movie-rec-network:
+    driver: bridge

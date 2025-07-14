@@ -1,0 +1,17 @@
+# Data and models (too large for GitHub)
+data/
+models/
+*.csv
+*.parquet
+
+# Python
+__pycache__/
+*.pyc
+.DS_Store
+
+# Notebooks (unless you want to share them)
+notebooks/
+*.ipynb_checkpoints/
+
+# Logs
+*.log
