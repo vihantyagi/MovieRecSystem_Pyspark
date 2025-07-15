@@ -2,6 +2,14 @@
 
 A scalable movie recommendation system built with Apache Spark and MLlib using collaborative filtering (ALS algorithm). The system includes a FastAPI backend, Streamlit dashboard, and is fully containerized with Docker.
 
+## Dashboard 
+
+<img width="1704" height="929" alt="Screenshot 2025-07-15 at 4 06 03 PM" src="https://github.com/user-attachments/assets/43767ca4-1e8d-44b7-9d8f-7dc33b012562" />
+
+<img width="1675" height="956" alt="Screenshot 2025-07-15 at 4 06 29 PM" src="https://github.com/user-attachments/assets/9848442d-1933-468f-aa59-10500d1b4394" />
+
+<img width="1706" height="972" alt="Screenshot 2025-07-15 at 4 06 55 PM" src="https://github.com/user-attachments/assets/efafdbff-fce6-4db9-92e0-810098400906" />
+
 ## Tech Stack
 
 - **Apache Spark 3.5.0** - Distributed data processing and machine learning
@@ -77,17 +85,9 @@ This project uses the MovieLens 25M dataset containing:
 - Model performance metrics
 - User-friendly recommendation interface
 
-## Dashboard 
-
-<img width="1704" height="929" alt="Screenshot 2025-07-15 at 4 06 03 PM" src="https://github.com/user-attachments/assets/43767ca4-1e8d-44b7-9d8f-7dc33b012562" />
-
-<img width="1675" height="956" alt="Screenshot 2025-07-15 at 4 06 29 PM" src="https://github.com/user-attachments/assets/9848442d-1933-468f-aa59-10500d1b4394" />
-
-<img width="1706" height="972" alt="Screenshot 2025-07-15 at 4 06 55 PM" src="https://github.com/user-attachments/assets/efafdbff-fce6-4db9-92e0-810098400906" />
-
 ## Architecture
 
-<img width="1087" height="363" alt="Screenshot 2025-07-15 at 4 03 31 PM" src="https://github.com/user-attachments/assets/735b2a12-7149-4f19-b906-5924c281f847" />
+<img width="1082" height="351" alt="Screenshot 2025-07-15 at 4 13 08 PM" src="https://github.com/user-attachments/assets/40c50cac-1bb4-45b5-942e-abd28e161a77" />
 
 ## Project Structure
 
