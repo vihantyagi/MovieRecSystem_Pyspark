@@ -79,12 +79,15 @@ This project uses the MovieLens 25M dataset containing:
 
 ## Dashboard 
 
+<img width="1704" height="929" alt="Screenshot 2025-07-15 at 4 06 03 PM" src="https://github.com/user-attachments/assets/43767ca4-1e8d-44b7-9d8f-7dc33b012562" />
 
+<img width="1675" height="956" alt="Screenshot 2025-07-15 at 4 06 29 PM" src="https://github.com/user-attachments/assets/9848442d-1933-468f-aa59-10500d1b4394" />
 
+<img width="1706" height="972" alt="Screenshot 2025-07-15 at 4 06 55 PM" src="https://github.com/user-attachments/assets/efafdbff-fce6-4db9-92e0-810098400906" />
 
 ## Architecture
 
-
+<img width="1087" height="363" alt="Screenshot 2025-07-15 at 4 03 31 PM" src="https://github.com/user-attachments/assets/735b2a12-7149-4f19-b906-5924c281f847" />
 
 ## Project Structure
 
@@ -95,7 +98,8 @@ MovieRecSystem/
 │   ├── dashboard/        # Streamlit frontend
 │   ├── data_processing/  # Data preprocessing
 │   ├── model/           # ALS model and evaluation
-│   └── train.py         # Model training script
+│   ├── train.py         # Model training script
+│   └── run_full_evaluation.py # to get metrics of the trained model. 
 ├── data/
 │   ├── ml-25m/          # MovieLens dataset
 │   └── processed/       # Processed data
