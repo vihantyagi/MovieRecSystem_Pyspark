@@ -2,10 +2,9 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, avg, count, stddev, collect_list, size, array_intersect, explode
 import matplotlib.pyplot as plt
-import seaborn as sns
 import numpy as np
 import json
-from typing import Dict, List, Tuple
+from typing import Dict
 
 class RecommenderEvaluator:
     def __init__(self, spark_session):

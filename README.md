@@ -23,7 +23,7 @@ A scalable movie recommendation system built with Apache Spark and MLlib using c
 ### Key Libraries
 - **API**: FastAPI, Uvicorn, Pydantic, NumPy
 - **Dashboard**: Streamlit, Pandas, Plotly, Requests
-- **ML/Processing**: PySpark, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn
+- **ML/Processing**: PySpark, Pandas, NumPy, Matplotlib
 
 ## Dataset
 
